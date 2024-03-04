@@ -40,23 +40,19 @@ class Telephone {
     }
 }
 
-class Observer {
+class Observer{}
+
+class PrintObserver extends Observer {
     update(phoneNumber) {
-      console.log(phoneNumber);
+        console.log(phoneNumber);
     }
-  }
-  
-  class PrintObserver {
+}
+
+class CustomPrintObserver extends Observer {
     update(phoneNumber) {
-      console.log(phoneNumber);
+        console.log("Now Dialing", phoneNumber);
     }
-  }
-  
-  class CustomPrintObserver {
-    update(phoneNumber) {
-      console.log("Now Dialing", phoneNumber);
-    }
-  }
+}
 
 // Example usage
 const telephone = new Telephone();
